@@ -15,6 +15,7 @@ const Feed = () => {
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+      
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
@@ -42,7 +43,7 @@ const Feed = () => {
           mb={2}
           sx={{ color: "white" }}
         >
-          {selectedCategory} <span style={{ color: "#F31503" }}>Videos</span>
+          {selectedCategory} <span style={{ color: "rgb(96, 167, 237)" }}>Videos</span>
         </Typography>
         <Videos videos={videos} />
       </Box>
