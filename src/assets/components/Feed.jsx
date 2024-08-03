@@ -9,18 +9,18 @@ const Feed = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-    .then((data)=> setVideos(data.items))
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+      setVideos(data.items)
+    );
   }, [selectedCategory]);
 
   return (
-    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
-      
+    <Stack sx={{ flexDirection: { xs: "column", md: "row" } }}>
       <Box
         sx={{
-          height: { sx: "auto", md: "92vh" },
+          height: { xs: "auto", md: "92vh" },
           borderRight: "1px solid #3d3d3d",
-          px: { sx: 0, md: 2 },
+          px: { xs: 0, md: 2 },
         }}
       >
         <Sidebar
@@ -36,14 +36,18 @@ const Feed = () => {
         </Typography>
       </Box>
 
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box
+        p={2}
+        sx={{ overflowY: "auto", height: { xs: "auto", md: "90vh" }, flex: 2 }}
+      >
         <Typography
           variant="h4"
           fontWeight="bold"
           mb={2}
           sx={{ color: "white" }}
         >
-          {selectedCategory} <span style={{ color: "rgb(96, 167, 237)" }}>Videos</span>
+          {selectedCategory}{" "}
+          <span style={{ color: "rgb(96, 167, 237)" }}>Videos</span>
         </Typography>
         <Videos videos={videos} />
       </Box>
