@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Logo = () => {
-  return (
-    <img src="../../../public/logo.jpg" alt="logo" height={45} />
-  )
-}
+  return <img src="/src/Images/logo.jpg" alt="logo" height={45} />;
+};
 
-export default Logo
+export default Logo;
