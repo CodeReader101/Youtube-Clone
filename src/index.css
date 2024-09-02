@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100vw;
 }
 
 a {
@@ -85,7 +86,10 @@ a {
   .search-bar {
     width: 200px;
   }
+}
 
-  body {
+@media screen and (max-width: 450px) {
+  #root {
+    width: 100%;
   }
 }

@@ -17,7 +17,6 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
       margin: "auto",
       marginTop,
       backgroundColor: "#1E1E1E",
-      padding: "16px",
     }}
   >
     <Link to={`/channel/${channelDetail?.id?.channelId}`}>

@@ -15,12 +15,12 @@ const Feed = () => {
   }, [selectedCategory]);
 
   return (
-    <Stack sx={{ flexDirection: { xs: "column", md: "row" } }}>
+    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
         sx={{
-          height: { xs: "auto", md: "92vh" },
+          height: { sx: "auto", md: "92vh" },
           borderRight: "1px solid #3d3d3d",
-          px: { xs: 0, md: 2 },
+          px: { sx: 0, md: 2 },
         }}
       >
         <Sidebar
@@ -38,7 +38,12 @@ const Feed = () => {
 
       <Box
         p={2}
-        sx={{ overflowY: "auto", height: { xs: "auto", md: "90vh" }, flex: 2 }}
+        sx={{
+          overflowY: "auto",
+          height: "90vh",
+          flex: 2,
+          width: { sx: "100%", md: "auto" }, // Ensure full width on smaller screens
+        }}
       >
         <Typography
           variant="h4"

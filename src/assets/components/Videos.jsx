@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, CircularProgress, Box } from "@mui/material";
 import { ChannelCard, VideoCard } from "./";
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos, direction }) => {
   if (!videos?.length) {
     return (
       <Box
@@ -19,7 +19,7 @@ const Videos = ({ videos }) => {
   }
 
   return (
-    <Grid container spacing={2} justifyContent="center">
+    <Grid container spacing={2} justifyContent="center" direction={direction}>
       {videos.map((item, idx) => {
         if (item.id.videoId && item.snippet) {
           return (
