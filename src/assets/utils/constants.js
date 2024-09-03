@@ -13,7 +13,7 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
 export const categories = [
-  { name: "New", icon: HomeIcon },
+  { name: "Latest", icon: HomeIcon },
   { name: "Coding", icon: CodeIcon },
   { name: "ReactJS", icon: CodeIcon },
   { name: "Music", icon: MusicNoteIcon },

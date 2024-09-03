@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Paper, IconButton, Stack } from "@mui/material";
-import InputAdorment from "@mui/joy/Input";
+import Input from "@mui/joy/Input";
 import SearchIcon from "@mui/icons-material/Search";
 
 const SearchBar = () => {
@@ -24,23 +24,28 @@ const SearchBar = () => {
       onSubmit={onhandleSubmit}
       sx={{
         borderRadius: 20,
-
         pl: 2,
         boxShadow: "none",
         mr: { sm: 5 },
         backgroundColor: "black",
+        overflow: "hidden",
       }}
     >
       <Stack direction="row">
-        <InputAdorment
+        <Input
           variant="outlined"
           placeholder="Search..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          sx={{ backgroundColor: "black", color: "white"  }}
-        >
-        
-        </InputAdorment>
+          sx={{
+            backgroundColor: "black",
+            color: "white",
+            width: {
+              xs: "128px",
+              sm: "100%",
+            },
+          }}
+        ></Input>
         <IconButton
           type="submit"
           sx={{ p: "10px", color: "red" }}

@@ -19,7 +19,7 @@ const Videos = ({ videos, direction }) => {
   }
 
   return (
-    <Grid container spacing={2} justifyContent="center" direction={direction}>
+    <Grid container spacing={4} justifyContent="center" direction={direction}>
       {videos.map((item, idx) => {
         if (item.id.videoId && item.snippet) {
           return (
