@@ -23,13 +23,13 @@ const Videos = ({ videos, direction }) => {
       {videos.map((item, idx) => {
         if (item.id.videoId && item.snippet) {
           return (
-            <Grid item key={idx} xs={12} sm={6} md={4} lg={3}>
+            <Grid item key={idx} xs={12} sm={6} md={6} lg={4}>
               <VideoCard video={item} />
             </Grid>
           );
         } else if (item.id.channelId && item.snippet) {
           return (
-            <Grid item key={idx} xs={12} sm={6} md={4} lg={3}>
+            <Grid item key={idx} xs={12} sm={6} md={6} lg={4}>
               <ChannelCard channelDetail={item} />
             </Grid>
           );

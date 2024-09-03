@@ -12,9 +12,8 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      width: { xs: "100%", sm: "310px" },
-      height: "326px",
-      margin: "auto",
+      width: { xs: "100%", sm: "320px" },
+      height: "325px",
       marginTop,
       backgroundColor: "#1E1E1E",
     }}
@@ -40,6 +39,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
             width: "180px",
             mb: 2,
             border: "1px solid #e3e3e3",
+            margin: "auto",
           }}
         />
         <Typography variant="h6">
